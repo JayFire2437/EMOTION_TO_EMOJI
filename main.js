@@ -18,7 +18,7 @@ document.getElementById("result").innerHTML = '<img id="captured_image" src="'+d
 
 console.log('ml5 version', ml5.version);
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/1jHU-epXK/model.json',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/AhhJCJbp_/',modelLoaded);
 
 function modelLoaded(){
     console.log('Model Loaded');
@@ -56,13 +56,13 @@ function gotResult(error, results) {
         {
             document.getElementById("update_emoji").innerHTML = "&#128531;";
         }
-        if(results[0].label == "angry")
+        if(results[0].label == "mad")
         {
             document.getElementById("update_emoji").innerHTML = "&#128545;";
         }
-        if(results[0].label == "scared")
+        if(results[0].label == "victory")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128561;";
+            document.getElementById("update_emoji").innerHTML = "&#9996;";
         }
 
         if(results[1].label == "happy")
@@ -73,13 +73,13 @@ function gotResult(error, results) {
         {
             document.getElementById("update_emoji2").innerHTML = "&#128531;";
         }
-        if(results[1].label == "angry")
+        if(results[1].label == "mad")
         {
             document.getElementById("update_emoji2").innerHTML = "&#128545;";
         }
-        if(results[1].label == "scared")
+        if(results[1].label == "victory")
         {
-            document.getElementById("update_emoji2").innerHTML = "&#128561;";
+            document.getElementById("update_emoji2").innerHTML = "&#9996;";
         }
     }
 }
